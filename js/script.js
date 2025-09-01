@@ -143,9 +143,8 @@ const serviceDetails = {
                 <li>Design e planejamento de redes corporativas</li>
                 <li>Implementação de switches e roteadores</li>
                 <li>Configuração de VLANs e segmentação de rede</li>
-                <li>Monitoramento e gerenciamento de performance</li>
-                <li>Cabeamento estruturado e fibra óptica</li>
                 <li>Redes wireless empresariais</li>
+                <li>Monitoramento e gerenciamento de performance</li>
             </ul>
             <p>Nossa equipe especializada garante que sua infraestrutura de rede seja robusta, escalável e preparada para o futuro.</p>
         `
@@ -160,7 +159,6 @@ const serviceDetails = {
                 <li><strong>Sophos Firewall:</strong> Proteção avançada com tecnologia de deep learning</li>
                 <li><strong>Fortigate:</strong> Soluções de segurança de alta performance</li>
                 <li>Configuração e otimização de regras de segurança</li>
-                <li>Monitoramento 24/7 de ameaças</li>
                 <li>Implementação de políticas de acesso</li>
                 <li>Análise de logs e relatórios de segurança</li>
             </ul>
@@ -191,9 +189,7 @@ const serviceDetails = {
             <p>Visibilidade total sobre a segurança da sua empresa com soluções avançadas de proteção contra ameaças digitais.</p>
             <h4>Soluções de Segurança:</h4>
             <ul>
-                <li>Análise de vulnerabilidades e penetration testing</li>
-                <li>Implementação de SOC (Security Operations Center)</li>
-                <li>Monitoramento de ameaças em tempo real</li>
+                <li>Análise de vulnerabilidades</li>
                 <li>Treinamento em conscientização de segurança</li>
                 <li>Políticas de segurança da informação</li>
                 <li>Compliance e adequação a normas (LGPD, ISO 27001)</li>
@@ -210,7 +206,7 @@ const serviceDetails = {
             <ul>
                 <li><strong>Veeam Backup & Replication:</strong> Solução líder em backup e recuperação</li>
                 <li>Backup automatizado e programado</li>
-                <li>Recuperação rápida de dados (RTO/RPO otimizados)</li>
+                <li>Recuperação rápida de dados</li>
                 <li>Backup para nuvem híbrida</li>
                 <li>Monitoramento e alertas proativos</li>
                 <li>Testes regulares de recuperação</li>
@@ -267,8 +263,7 @@ const serviceDetailsES = {
                 <li>Implementación de switches y routers</li>
                 <li>Configuración de VLANs y segmentación de red</li>
                 <li>Monitoreo y gestión de rendimiento</li>
-                <li>Cableado estructurado y fibra óptica</li>
-                <li>Redes inalámbricas empresariales</li>
+                <li>Redes WIFI empresariales</li>
             </ul>
             <p>Nuestro equipo especializado garantiza que su infraestructura de red sea robusta, escalable y preparada para el futuro.</p>
         `
@@ -283,7 +278,6 @@ const serviceDetailsES = {
                 <li><strong>Sophos Firewall:</strong> Protección avanzada con tecnología de deep learning</li>
                 <li><strong>Fortigate:</strong> Soluciones de seguridad de alto rendimiento</li>
                 <li>Configuración y optimización de reglas de seguridad</li>
-                <li>Monitoreo 24/7 de amenazas</li>
                 <li>Implementación de políticas de acceso</li>
                 <li>Análisis de logs e informes de seguridad</li>
             </ul>
@@ -315,8 +309,6 @@ const serviceDetailsES = {
             <h4>Soluciones de Seguridad:</h4>
             <ul>
                 <li>Análisis de vulnerabilidades y penetration testing</li>
-                <li>Implementación de SOC (Security Operations Center)</li>
-                <li>Monitoreo de amenazas en tiempo real</li>
                 <li>Entrenamiento en concientización de seguridad</li>
                 <li>Políticas de seguridad de la información</li>
                 <li>Compliance y adecuación a normas (LGPD, ISO 27001)</li>
