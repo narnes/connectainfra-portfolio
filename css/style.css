@@ -1,4 +1,30 @@
-/* Botão de menu móvel */
+/* Banner (Carousel) */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botão do menu móvel */
 .mobile-menu-toggle {
     display: none;
     font-size: 1.5rem;
