@@ -397,6 +397,8 @@ const serviceDetailsES = {
     }
 };
 
+// Detalhes dos serviços em inglês
+const serviceDetailsEN = {
 infrastructure: {
     title: "Network Infrastructure",
     content: `
