@@ -433,6 +433,7 @@ function changeLanguage() {
     const selectElement = document.getElementById("languageSelect");
     const selectedLanguage = selectElement.value;
 
+    // Redireciona para o arquivo correto com base no idioma selecionado
     if (selectedLanguage === "es") {
         window.location.href = "index_es.html"; // Redireciona para a versão em espanhol
     } else if (selectedLanguage === "en") {
@@ -443,17 +444,19 @@ function changeLanguage() {
 }
 
 // Define o idioma selecionado no carregamento da página
-window.onload = function() {
+window.addEventListener("DOMContentLoaded", function () {
     const path = window.location.pathname;
     const filename = path.substring(path.lastIndexOf("/") + 1);
 
     const selectElement = document.getElementById("languageSelect");
+
+    // Define o valor do seletor com base no arquivo atual
     if (filename === "index_es.html") {
         selectElement.value = "es";
     } else if (filename === "index_en.html") {
         selectElement.value = "en";
-    }else {
+    } else {
         selectElement.value = "pt";
     }
-};
+});
 
