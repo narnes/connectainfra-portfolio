@@ -451,7 +451,7 @@ window.onload = function() {
     if (filename === "index_es.html") {
         selectElement.value = "es";
     } else if (filename === "index_en.html") {
-        selectElement.value = "eu";
+        selectElement.value = "en";
     }else {
         selectElement.value = "pt";
     }
