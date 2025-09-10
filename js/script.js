@@ -529,13 +529,20 @@ function showServiceDetails(serviceType) {
     const path = window.location.pathname;
     const filename = path.substring(path.lastIndexOf("/") + 1);
     const isSpanish = filename === "index_es.html";
+    const isEnglish = filename === "index_en.html";
     
     // Usar o objeto correto baseado no idioma
-    const details = isSpanish ? serviceDetailsES : serviceDetails;
+    const details = isSpanish 
+        ? serviceDetailsES 
+        : isEnglish 
+        ? serviceDetailsEN 
+        : serviceDetails; // Default para português
     
     if (details[serviceType]) {
         modalBody.innerHTML = details[serviceType].content;
         modal.style.display = 'block';
+    } else {
+        console.error("Service not found:", serviceType);
     }
 }
 
