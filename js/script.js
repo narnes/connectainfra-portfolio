@@ -399,7 +399,7 @@ const serviceDetailsES = {
 
 // Detalhes dos serviços em ingles
 const serviceDetailsEN = {
-infrastructure: {
+infraestrutura: {
     title: "Network Infrastructure",
     content: `
         <h3>Network Infrastructure</h3>
@@ -450,7 +450,7 @@ cloud: {
         <p>Transform your infrastructure with the flexibility and cost-efficiency of cloud computing.</p>
     `
 },
-cybersecurity: {
+ciberseguranca: {
     title: "Cybersecurity",
     content: `
         <h3>Cybersecurity</h3>
@@ -484,7 +484,7 @@ backup: {
         <p>Keep your critical data protected with the most advanced backup technology in the market.</p>
     `
 },
-consulting: {
+consultoria: {
     title: "IT Consulting",
     content: `
         <h3>IT Consulting</h3>
@@ -501,7 +501,7 @@ consulting: {
         <p>Turn technology into a competitive advantage with our specialized consulting services.</p>
     `
 },
-support: {
+suporte: {
     title: "Technical Support",
     content: `
         <h3>Technical Support</h3>
