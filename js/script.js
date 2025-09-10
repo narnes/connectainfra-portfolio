@@ -435,7 +435,7 @@ function changeLanguage() {
 
     if (selectedLanguage === "es") {
         window.location.href = "index_es.html"; // Redireciona para a versão em espanhol
-    } else {
+    } else if {
         window.location.href = "index_en.html"; // Redireciona para a versão em inglês
     } else {
         window.location.href = "index.html"; // Redireciona para a versão em português
