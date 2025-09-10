@@ -14,58 +14,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Formulário de contato
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('#contactForm');
-
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('#contact form');
+    
     if (form) {
-        form.addEventListener('submit', async function (e) {
-            e.preventDefault(); // Impede o envio padrão do formulário
-
-            // Obter os valores do formulário
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validação básica
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
-
-            // Validação básica
+            
             if (!name || !email || !message) {
                 alert('Por favor, preencha todos os campos.');
                 return;
             }
-
+            
             // Validação de email
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 alert('Por favor, insira um email válido.');
                 return;
             }
-
-            // Construir o objeto de dados
-            const formData = {
-                name: name,
-                email: email,
-                message: message
-            };
-
-            try {
-                // Enviar os dados para o endpoint do Formspree
-                const response = await fetch('https://formspree.io/f/mgvlzllp', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                if (response.ok) {
-                    alert('Mensagem enviada com sucesso! Obrigado pelo contato.');
-                    form.reset(); // Limpar o formulário após o envio
-                } else {
-                    alert('Erro ao enviar a mensagem. Por favor, tente novamente mais tarde.');
-                }
-            } catch (error) {
-                console.error('Erro ao enviar formulário:', error);
-                alert('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.');
-            }
+            
+            // Simular envio do formulário
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            form.reset();
         });
     }
 });
@@ -148,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Detalhes dos serviços em português
+// Detalhes dos serviços
 const serviceDetails = {
     infraestrutura: {
         title: "Infraestrutura de Redes",
@@ -160,8 +135,9 @@ const serviceDetails = {
                 <li>Design e planejamento de redes corporativas</li>
                 <li>Implementação de switches e roteadores</li>
                 <li>Configuração de VLANs e segmentação de rede</li>
-                <li>Redes wireless empresariais</li>
                 <li>Monitoramento e gerenciamento de performance</li>
+                <li>Cabeamento estruturado e fibra óptica</li>
+                <li>Redes wireless empresariais</li>
             </ul>
             <p>Nossa equipe especializada garante que sua infraestrutura de rede seja robusta, escalável e preparada para o futuro.</p>
         `
@@ -176,6 +152,7 @@ const serviceDetails = {
                 <li><strong>Sophos Firewall:</strong> Proteção avançada com tecnologia de deep learning</li>
                 <li><strong>Fortigate:</strong> Soluções de segurança de alta performance</li>
                 <li>Configuração e otimização de regras de segurança</li>
+                <li>Monitoramento 24/7 de ameaças</li>
                 <li>Implementação de políticas de acesso</li>
                 <li>Análise de logs e relatórios de segurança</li>
             </ul>
@@ -206,7 +183,9 @@ const serviceDetails = {
             <p>Visibilidade total sobre a segurança da sua empresa com soluções avançadas de proteção contra ameaças digitais.</p>
             <h4>Soluções de Segurança:</h4>
             <ul>
-                <li>Análise de vulnerabilidades</li>
+                <li>Análise de vulnerabilidades e penetration testing</li>
+                <li>Implementação de SOC (Security Operations Center)</li>
+                <li>Monitoramento de ameaças em tempo real</li>
                 <li>Treinamento em conscientização de segurança</li>
                 <li>Políticas de segurança da informação</li>
                 <li>Compliance e adequação a normas (LGPD, ISO 27001)</li>
@@ -223,7 +202,7 @@ const serviceDetails = {
             <ul>
                 <li><strong>Veeam Backup & Replication:</strong> Solução líder em backup e recuperação</li>
                 <li>Backup automatizado e programado</li>
-                <li>Recuperação rápida de dados</li>
+                <li>Recuperação rápida de dados (RTO/RPO otimizados)</li>
                 <li>Backup para nuvem híbrida</li>
                 <li>Monitoramento e alertas proativos</li>
                 <li>Testes regulares de recuperação</li>
@@ -267,140 +246,13 @@ const serviceDetails = {
     }
 };
 
-// Detalhes dos serviços em espanhol
-const serviceDetailsES = {
-    infraestrutura: {
-        title: "Infraestructura de Redes",
-        content: `
-            <h3>Infraestructura de Redes</h3>
-            <p>Ofrecemos soluciones completas para diseño, implementación y gestión de redes corporativas, garantizando alto rendimiento y seguridad.</p>
-            <h4>Nuestros Servicios Incluyen:</h4>
-            <ul>
-                <li>Diseño y planificación de redes corporativas</li>
-                <li>Implementación de switches y routers</li>
-                <li>Configuración de VLANs y segmentación de red</li>
-                <li>Monitoreo y gestión de rendimiento</li>
-                <li>Redes WIFI empresariales</li>
-            </ul>
-            <p>Nuestro equipo especializado garantiza que su infraestructura de red sea robusta, escalable y preparada para el futuro.</p>
-        `
-    },
-    firewall: {
-        title: "Firewall",
-        content: `
-            <h3>Firewall</h3>
-            <p>Proteja su red contra amenazas cibernéticas con nuestras soluciones avanzadas de firewall, especializadas en tecnologías líderes del mercado.</p>
-            <h4>Especialidades:</h4>
-            <ul>
-                <li><strong>Sophos Firewall:</strong> Protección avanzada con tecnología de deep learning</li>
-                <li><strong>Fortigate:</strong> Soluciones de seguridad de alto rendimiento</li>
-                <li>Configuración y optimización de reglas de seguridad</li>
-                <li>Implementación de políticas de acceso</li>
-                <li>Análisis de logs e informes de seguridad</li>
-            </ul>
-            <p>Mantenemos su empresa protegida contra las más recientes amenazas cibernéticas con tecnología de punta.</p>
-        `
-    },
-    cloud: {
-        title: "Cloud Computing",
-        content: `
-            <h3>Cloud Computing</h3>
-            <p>Aproveche el poder de la nube con nuestras soluciones basadas en Microsoft Azure, ofreciendo escalabilidad, seguridad y eficiencia.</p>
-            <h4>Servicios en la Nube:</h4>
-            <ul>
-                <li>Migración a Microsoft Azure</li>
-                <li>Implementación de infraestructura como servicio (IaaS)</li>
-                <li>Plataforma como servicio (PaaS)</li>
-                <li>Backup y disaster recovery en la nube</li>
-                <li>Optimización de costos en la nube</li>
-                <li>Monitoreo y gestión continua</li>
-            </ul>
-            <p>Transforme su infraestructura con la flexibilidad y economía de la computación en la nube.</p>
-        `
-    },
-    ciberseguranca: {
-        title: "Ciberseguridad",
-        content: `
-            <h3>Ciberseguridad</h3>
-            <p>Visibilidad total sobre la seguridad de su empresa con soluciones avanzadas de protección contra amenazas digitales.</p>
-            <h4>Soluciones de Seguridad:</h4>
-            <ul>
-                <li>Análisis de vulnerabilidades y penetration testing</li>
-                <li>Entrenamiento en concientización de seguridad</li>
-                <li>Políticas de seguridad de la información</li>
-                <li>Compliance y adecuación a normas (LGPD, ISO 27001)</li>
-            </ul>
-            <p>Proteja sus datos y sistemas con nuestro enfoque integral de ciberseguridad.</p>
-        `
-    },
-    backup: {
-        title: "Backup Intelligence",
-        content: `
-            <h3>Backup Intelligence</h3>
-            <p>Garantice la protección de sus datos con nuestra solución de backup inteligente y confiable, especializada en tecnología Veeam.</p>
-            <h4>Tecnologías y Servicios:</h4>
-            <ul>
-                <li><strong>Veeam Backup & Replication:</strong> Solución líder en backup y recuperación</li>
-                <li>Backup automatizado y programado</li>
-                <li>Recuperación rápida de datos (RTO/RPO optimizados)</li>
-                <li>Backup para nube híbrida</li>
-                <li>Monitoreo y alertas proactivas</li>
-                <li>Pruebas regulares de recuperación</li>
-            </ul>
-            <p>Sus datos críticos siempre protegidos con la más avanzada tecnología de backup del mercado.</p>
-        `
-    },
-    consultoria: {
-        title: "Consultoría en TI",
-        content: `
-            <h3>Consultoría en TI</h3>
-            <p>Orientación estratégica para optimizar sus inversiones en tecnología e impulsar el crecimiento de su negocio.</p>
-            <h4>Servicios de Consultoría:</h4>
-            <ul>
-                <li>Planificación estratégica de TI</li>
-                <li>Análisis de infraestructura actual</li>
-                <li>Roadmap de modernización tecnológica</li>
-                <li>Optimización de costos operacionales</li>
-                <li>Gobernanza de TI</li>
-                <li>Gestión de proyectos tecnológicos</li>
-            </ul>
-            <p>Transforme la tecnología en ventaja competitiva con nuestra consultoría especializada.</p>
-        `
-    },
-    suporte: {
-        title: "Soporte Técnico",
-        content: `
-            <h3>Soporte Técnico</h3>
-            <p>Soporte especializado para garantizar el funcionamiento continuo de sus sistemas con atención ágil y eficiente.</p>
-            <h4>Modalidades de Soporte:</h4>
-            <ul>
-                <li>Soporte remoto 24/7</li>
-                <li>Atención on-site cuando sea necesario</li>
-                <li>Mantenimiento preventivo y correctivo</li>
-                <li>Monitoreo proactivo de sistemas</li>
-                <li>Help desk especializado</li>
-                <li>SLA personalizado según necesidad</li>
-            </ul>
-            <p>Mantenga su operación funcionando sin interrupciones con nuestro soporte técnico especializado.</p>
-        `
-    }
-};
-
 // Função para mostrar detalhes do serviço
 function showServiceDetails(serviceType) {
     const modal = document.getElementById('serviceModal');
     const modalBody = document.getElementById('modalBody');
     
-    // Detectar idioma da página
-    const path = window.location.pathname;
-    const filename = path.substring(path.lastIndexOf("/") + 1);
-    const isSpanish = filename === "index_es.html";
-    
-    // Usar o objeto correto baseado no idioma
-    const details = isSpanish ? serviceDetailsES : serviceDetails;
-    
-    if (details[serviceType]) {
-        modalBody.innerHTML = details[serviceType].content;
+    if (serviceDetails[serviceType]) {
+        modalBody.innerHTML = serviceDetails[serviceType].content;
         modal.style.display = 'block';
     }
 }
