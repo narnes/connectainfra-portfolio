@@ -435,7 +435,7 @@ function changeLanguage() {
 
     if (selectedLanguage === "es") {
         window.location.href = "index_es.html"; // Redireciona para a versão em espanhol
-    } else if {
+    } else if (selectedLanguage === "en") {
         window.location.href = "index_en.html"; // Redireciona para a versão em inglês
     } else {
         window.location.href = "index.html"; // Redireciona para a versão em português
@@ -450,7 +450,7 @@ window.onload = function() {
     const selectElement = document.getElementById("languageSelect");
     if (filename === "index_es.html") {
         selectElement.value = "es";
-    } else if{
+    } else if (filename === "index_en.html") {
         selectElement.value = "eu";
     }else {
         selectElement.value = "pt";
