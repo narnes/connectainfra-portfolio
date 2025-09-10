@@ -14,41 +14,58 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Formulário de contato
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('#contact form');
-    
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('#contactForm');
+
     if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Validação básica
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault(); // Impede o envio padrão do formulário
+
+            // Obter os valores do formulário
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
-            
+
+            // Validação básica
             if (!name || !email || !message) {
                 alert('Por favor, preencha todos os campos.');
                 return;
             }
-            
+
             // Validação de email
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 alert('Por favor, insira um email válido.');
                 return;
             }
-            
-            // Criar email com mailto
-            const subject = encodeURIComponent(`Contato do site - ${name}`);
-            const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`);
-            const mailtoLink = `mailto:gerencia@connectainfra.com.br?subject=${subject}&body=${body}`;
-            
-            // Abrir cliente de email
-            window.location.href = mailtoLink;
-            
-            // Confirmar envio
-            alert('Seu cliente de email será aberto para enviar a mensagem. Obrigado pelo contato!');
-            form.reset();
+
+            // Construir o objeto de dados
+            const formData = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            try {
+                // Enviar os dados para o endpoint do Formspree
+                const response = await fetch('https://formspree.io/f/mgvlzllp', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    alert('Mensagem enviada com sucesso! Obrigado pelo contato.');
+                    form.reset(); // Limpar o formulário após o envio
+                } else {
+                    alert('Erro ao enviar a mensagem. Por favor, tente novamente mais tarde.');
+                }
+            } catch (error) {
+                console.error('Erro ao enviar formulário:', error);
+                alert('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.');
+            }
         });
     }
 });
