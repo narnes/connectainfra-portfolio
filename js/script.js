@@ -397,6 +397,129 @@ const serviceDetailsES = {
     }
 };
 
+// Detalhes dos serviços em ingles
+const serviceDetailsEN = {
+infrastructure: {
+    title: "Network Infrastructure",
+    content: `
+        <h3>Network Infrastructure</h3>
+        <p>We offer complete solutions for designing, implementing, and managing corporate networks, ensuring high performance and security.</p>
+        <h4>Our Services Include:</h4>
+        <ul>
+            <li>Corporate network design and planning</li>
+            <li>Implementation of switches and routers</li>
+            <li>VLAN configuration and network segmentation</li>
+            <li>Performance monitoring and management</li>
+            <li>Structured cabling and fiber optics</li>
+            <li>Enterprise wireless networks</li>
+        </ul>
+        <p>Our specialized team ensures your network infrastructure is robust, scalable, and future-ready.</p>
+    `
+},
+firewall: {
+    title: "Firewall",
+    content: `
+        <h3>Firewall</h3>
+        <p>Protect your network from cyber threats with our advanced firewall solutions, specialized in leading market technologies.</p>
+        <h4>Specialties:</h4>
+        <ul>
+            <li><strong>Sophos Firewall:</strong> Advanced protection with deep learning technology</li>
+            <li><strong>Fortigate:</strong> High-performance security solutions</li>
+            <li>Configuration and optimization of security rules</li>
+            <li>24/7 threat monitoring</li>
+            <li>Implementation of access policies</li>
+            <li>Log analysis and security reports</li>
+        </ul>
+        <p>We keep your company protected against the latest cyber threats using state-of-the-art technology.</p>
+    `
+},
+cloud: {
+    title: "Cloud Computing",
+    content: `
+        <h3>Cloud Computing</h3>
+        <p>Leverage the power of the cloud with our Microsoft Azure-based solutions, offering scalability, security, and efficiency.</p>
+        <h4>Cloud Services:</h4>
+        <ul>
+            <li>Migration to Microsoft Azure</li>
+            <li>Implementation of Infrastructure as a Service (IaaS)</li>
+            <li>Platform as a Service (PaaS)</li>
+            <li>Cloud backup and disaster recovery</li>
+            <li>Cloud cost optimization</li>
+            <li>Continuous monitoring and management</li>
+        </ul>
+        <p>Transform your infrastructure with the flexibility and cost-efficiency of cloud computing.</p>
+    `
+},
+cybersecurity: {
+    title: "Cybersecurity",
+    content: `
+        <h3>Cybersecurity</h3>
+        <p>Gain complete visibility over your company's security with advanced solutions to protect against digital threats.</p>
+        <h4>Security Solutions:</h4>
+        <ul>
+            <li>Vulnerability analysis and penetration testing</li>
+            <li>Implementation of SOC (Security Operations Center)</li>
+            <li>Real-time threat monitoring</li>
+            <li>Security awareness training</li>
+            <li>Information security policies</li>
+            <li>Compliance with regulations (GDPR, ISO 27001)</li>
+        </ul>
+        <p>Protect your data and systems with our comprehensive cybersecurity approach.</p>
+    `
+},
+backup: {
+    title: "Backup Intelligence",
+    content: `
+        <h3>Backup Intelligence</h3>
+        <p>Ensure the protection of your data with our intelligent and reliable backup solutions, specialized in Veeam technology.</p>
+        <h4>Technologies and Services:</h4>
+        <ul>
+            <li><strong>Veeam Backup & Replication:</strong> Market-leading backup and recovery solution</li>
+            <li>Automated and scheduled backups</li>
+            <li>Fast data recovery (optimized RTO/RPO)</li>
+            <li>Hybrid cloud backup</li>
+            <li>Proactive monitoring and alerts</li>
+            <li>Regular recovery testing</li>
+        </ul>
+        <p>Keep your critical data protected with the most advanced backup technology in the market.</p>
+    `
+},
+consulting: {
+    title: "IT Consulting",
+    content: `
+        <h3>IT Consulting</h3>
+        <p>Strategic guidance to optimize your technology investments and drive your business growth.</p>
+        <h4>Consulting Services:</h4>
+        <ul>
+            <li>IT strategic planning</li>
+            <li>Analysis of current infrastructure</li>
+            <li>Roadmap for technological modernization</li>
+            <li>Operational cost optimization</li>
+            <li>IT governance</li>
+            <li>Management of technology projects</li>
+        </ul>
+        <p>Turn technology into a competitive advantage with our specialized consulting services.</p>
+    `
+},
+support: {
+    title: "Technical Support",
+    content: `
+        <h3>Technical Support</h3>
+        <p>Specialized support to ensure the continuous operation of your systems with fast and efficient service.</p>
+        <h4>Support Options:</h4>
+        <ul>
+            <li>24/7 remote support</li>
+            <li>On-site assistance when needed</li>
+            <li>Preventive and corrective maintenance</li>
+            <li>Proactive system monitoring</li>
+            <li>Specialized help desk</li>
+            <li>Customized SLA based on your needs</li>
+        </ul>
+        <p>Keep your operations running without interruptions with our specialized technical support.</p>
+    `
+}
+};
+
 // Função para mostrar detalhes do serviço
 function showServiceDetails(serviceType) {
     const modal = document.getElementById('serviceModal');
