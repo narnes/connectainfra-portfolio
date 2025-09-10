@@ -164,7 +164,6 @@ const serviceDetails = {
                 <li>Implementação de switches e roteadores</li>
                 <li>Configuração de VLANs e segmentação de rede</li>
                 <li>Monitoramento e gerenciamento de performance</li>
-                <li>Cabeamento estruturado e fibra óptica</li>
                 <li>Redes wireless empresariais</li>
             </ul>
             <p>Nossa equipe especializada garante que sua infraestrutura de rede seja robusta, escalável e preparada para o futuro.</p>
@@ -287,7 +286,6 @@ const serviceDetailsES = {
                 <li>Implementación de switches y routers</li>
                 <li>Configuración de VLANs y segmentación de red</li>
                 <li>Monitoreo y gestión de rendimiento</li>
-                <li>Cableado estructurado y fibra óptica</li>
                 <li>Redes inalámbricas empresariales</li>
             </ul>
             <p>Nuestro equipo especializado garantiza que su infraestructura de red sea robusta, escalable y preparada para el futuro.</p>
@@ -410,7 +408,6 @@ infraestrutura: {
             <li>Implementation of switches and routers</li>
             <li>VLAN configuration and network segmentation</li>
             <li>Performance monitoring and management</li>
-            <li>Structured cabling and fiber optics</li>
             <li>Enterprise wireless networks</li>
         </ul>
         <p>Our specialized team ensures your network infrastructure is robust, scalable, and future-ready.</p>
